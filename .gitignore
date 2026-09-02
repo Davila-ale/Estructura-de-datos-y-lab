@@ -1,0 +1,15 @@
+# Archivos generados por el laboratorio (pueden ocupar ~10 GB)
+salida/
+*.dat
+
+# Entornos y caché de Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Editor / sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
