@@ -100,7 +100,7 @@ Esto demuestra que el dato modificado no corresponde con la Merkle Root original
 
 La siguiente captura muestra la Merkle Root original, la nueva raíz después de modificar la transacción 3 y la comprobación de que la raíz cambió, ademas de la verificación correcta de la transacción 3 y la verificación utilizando un dato incorrecto:
 
-![Prueba de inclusión y merkle root](Captura-verificaciones/Captura de pantalla 2026-09-19 080432.png)
+![Prueba de inclusión y merkle root](Captura-verificaciones/captura-verificaciones.png)
 
 
 ## Uso de inteligencia artificial
