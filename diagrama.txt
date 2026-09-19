@@ -1,0 +1,52 @@
+DIAGRAMA DEL ÁRBOL DE MERKLE
+=============================
+
+
+                              MERKLE ROOT
+                                   |
+                     +-------------+-------------+
+                     |                           |
+                   H1234                       H5555
+                  /     \                     /     \
+                H12     H34                 H55     H55
+               /  \     /  \               /  \
+             H1   H2   H3   H4            H5   H5
+             |    |    |    |              |    |
+             T1   T2   T3   T4             T5   T5
+
+
+Transacciones:
+
+T1 = Alice paga 10 a Bob
+T2 = Carlos paga 20 a Diana
+T3 = Elena paga 15 a Juan
+T4 = Pedro paga 8 a Ana
+T5 = Luis paga 12 a Maria
+
+
+Construcción:
+
+H1  = SHA-256(T1)
+H2  = SHA-256(T2)
+H3  = SHA-256(T3)
+H4  = SHA-256(T4)
+H5  = SHA-256(T5)
+
+H12 = SHA-256(H1 + H2)
+H34 = SHA-256(H3 + H4)
+
+Como hay una cantidad impar de hojas:
+
+H55 = SHA-256(H5 + H5)
+
+Luego:
+
+H1234 = SHA-256(H12 + H34)
+
+Como queda un número impar de nodos:
+
+H5555 = SHA-256(H55 + H55)
+
+Finalmente:
+
+MERKLE ROOT = SHA-256(H1234 + H5555)
